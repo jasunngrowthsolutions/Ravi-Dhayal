@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#1f1a17">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Primary Meta Tags -->
+    <title>Website Currently Unavailable | Maintenance</title>
+    <meta name="description" content="We are currently reviewing this website and its ongoing maintenance requirements.">
+
+    <!-- Preconnect & Prefetch for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#1f1a17',
+                            light: '#fbf9f4',
+                            accent: '#f5b82e',
+                            accentHover: '#e0a320',
+                            textDark: '#36312d',
+                            textMuted: '#6b6661' 
+                        }
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                    },
+                    transitionTimingFunction: {
+                        'premium': 'cubic-bezier(0.16, 1, 0.3, 1)', 
+                    },
+                    boxShadow: {
+                        'premium-glow': '0 0 24px rgba(245, 184, 46, 0.25)',
+                        'premium-glow-hover': '0 0 36px rgba(245, 184, 46, 0.4)',
+                        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.1)',
+                        'soft': '0 12px 40px rgba(0, 0, 0, 0.08)',
+                        'soft-dark': '0 20px 40px rgba(0, 0, 0, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --brand-dark: #1f1a17;
+            --brand-accent: #f5b82e;
+        }
+
+        body {
+            background-color: var(--brand-dark); 
+            color: #ffffff;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .text-balance { text-wrap: balance; }
+        .text-pretty { text-wrap: pretty; }
+
+        /* Premium Focus Outlines (Accessibility) */
+        *:focus:not(:focus-visible) {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+        *:focus-visible {
+            outline: 2px solid var(--brand-accent);
+            outline-offset: 3px;
+            border-radius: 6px;
+        }
+
+        /* Initial Entry Animation */
+        .fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Reduced Motion Fallback */
+        @media (prefers-reduced-motion: reduce) {
+            .fade-in-up, .transition-all, .transition-transform, .animate-pulse, .animate-spin {
+                transition: none !important; animation: none !important; opacity: 1 !important; transform: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased font-sans selection:bg-brand-accent selection:text-brand-dark min-h-screen flex flex-col items-center justify-center relative p-4 md:p-8">
+
+    <!-- Ambient Background Gradients (matching original institutional theme) -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden="true">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-gradient-to-b from-[#15110f] to-transparent"></div>
+        <div class="absolute top-1/4 -left-32 w-64 md:w-[500px] h-64 md:h-[500px] bg-brand-accent/5 rounded-full blur-[80px] md:blur-[120px]"></div>
+        <div class="absolute bottom-1/4 -right-32 w-64 md:w-[500px] h-64 md:h-[500px] bg-brand-accent/5 rounded-full blur-[80px] md:blur-[120px]"></div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="relative z-10 w-full max-w-3xl mx-auto flex flex-col items-center text-center">
+        
+        <!-- Status Indicator -->
+        <div class="fade-in-up inline-flex items-center gap-2.5 bg-white/5 border border-white/10 px-4 py-2 rounded-full mb-10 shadow-sm backdrop-blur-md">
+            <span class="relative flex h-2.5 w-2.5" aria-hidden="true">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-accent"></span>
+            </span>
+            <span class="text-brand-accent font-bold text-[10px] sm:text-xs uppercase tracking-[0.2em]">Website Status</span>
+        </div>
+
+        <!-- Main Typography -->
+        <h1 class="fade-in-up delay-100 text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-6 text-balance text-white leading-tight">
+            Website Currently <br class="hidden sm:block">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-[#ffdb7a] to-white pb-1 inline-block">Unavailable.</span>
+        </h1>
+        
+        <!-- Supporting Copy -->
+        <div class="fade-in-up delay-200 max-w-2xl mx-auto space-y-4 mb-10">
+            <p class="text-gray-300 text-base md:text-lg lg:text-xl font-light text-pretty leading-relaxed">
+                We are currently reviewing the website and its ongoing maintenance requirements.
+            </p>
+            <p class="text-gray-400 text-sm md:text-base font-medium text-pretty leading-relaxed">
+                If you are planning to continue, transfer, or rebuild this website, kindly get in touch to discuss the next steps.
+            </p>
+        </div>
+
+        <!-- Service Card Section -->
+        <div class="fade-in-up delay-300 w-full bg-[#2a2420]/80 backdrop-blur-xl p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] border border-white/10 shadow-soft-dark relative overflow-hidden group hover:border-brand-accent/30 transition-colors duration-500 mb-10">
+            <div class="absolute -right-16 -top-16 w-32 h-32 bg-brand-accent/10 rounded-full blur-[40px] transition-all group-hover:bg-brand-accent/20"></div>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-center sm:text-left relative z-10">
+                <div class="w-12 h-12 rounded-xl bg-brand-accent/10 flex items-center justify-center shrink-0 border border-brand-accent/20">
+                    <i data-lucide="blocks" class="w-6 h-6 text-brand-accent" aria-hidden="true"></i>
+                </div>
+                <div>
+                    <h2 class="text-white font-bold text-lg md:text-xl tracking-tight">Website development, migration & maintenance services</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="fade-in-up delay-400 w-full flex justify-center">
+            <a href="https://jasunngrowthsolutions.com/" 
+               class="inline-flex bg-brand-accent text-brand-dark px-8 md:px-10 py-4 md:py-4 rounded-xl font-extrabold text-base md:text-lg hover:bg-white transition-all duration-300 shadow-[0_5px_15px_rgba(245,184,46,0.3)] hover:shadow-[0_8px_25px_rgba(245,184,46,0.4)] items-center gap-3 group outline-none hover:-translate-y-1">
+                <span>Discuss Your Website</span>
+                <i data-lucide="arrow-right" class="w-5 h-5 transition-transform group-hover:translate-x-1" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <!-- Closing Message -->
+        <footer class="fade-in-up delay-400 mt-16 md:mt-24 w-full pt-8 border-t border-white/10 flex flex-col items-center gap-2">
+            <p class="text-gray-400 text-xs md:text-sm italic font-light text-center max-w-lg text-balance opacity-80">
+                "A website may be built once, but keeping it running requires continued time, resources, and commitment."
+            </p>
+            <p class="text-brand-accent text-[10px] md:text-xs font-bold uppercase tracking-widest mt-4">
+                Thank you for your understanding.
+            </p>
+        </footer>
+
+    </main>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+</html>
