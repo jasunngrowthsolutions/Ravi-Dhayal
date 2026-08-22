@@ -1,196 +1,354 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="theme-color" content="#1f1a17">
     <meta name="robots" content="noindex, nofollow">
-    
-    <!-- Primary Meta Tags -->
     <title>Website Currently Unavailable | Maintenance</title>
     <meta name="description" content="We are currently reviewing this website and its ongoing maintenance requirements.">
 
-    <!-- Preconnect & Prefetch for Performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <script src="https://unpkg.com/lucide@latest" defer></script>
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            dark: '#1f1a17',
-                            light: '#fbf9f4',
-                            accent: '#f5b82e',
-                            accentHover: '#e0a320',
-                            textDark: '#36312d',
-                            textMuted: '#6b6661' 
-                        }
-                    },
-                    borderRadius: {
-                        '4xl': '2rem',
-                    },
-                    transitionTimingFunction: {
-                        'premium': 'cubic-bezier(0.16, 1, 0.3, 1)', 
-                    },
-                    boxShadow: {
-                        'premium-glow': '0 0 24px rgba(245, 184, 46, 0.25)',
-                        'premium-glow-hover': '0 0 36px rgba(245, 184, 46, 0.4)',
-                        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.1)',
-                        'soft': '0 12px 40px rgba(0, 0, 0, 0.08)',
-                        'soft-dark': '0 20px 40px rgba(0, 0, 0, 0.4)',
-                    }
-                }
-            }
-        }
-    </script>
-
     <style>
+        /* CSS Reset & Variables */
         :root {
             --brand-dark: #1f1a17;
             --brand-accent: #f5b82e;
+            --brand-accent-hover: #e0a320;
+            --text-muted: #9ca3af;
         }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Lightning Fast System Font Stack */
         body {
-            background-color: var(--brand-dark); 
+            background-color: var(--brand-dark);
             color: #ffffff;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
 
-        .text-balance { text-wrap: balance; }
-        .text-pretty { text-wrap: pretty; }
-
-        /* Premium Focus Outlines (Accessibility) */
-        *:focus:not(:focus-visible) {
-            outline: none !important;
-            box-shadow: none !important;
+        /* Ambient Background Glows */
+        .ambient-bg {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
         }
-        *:focus-visible {
-            outline: 2px solid var(--brand-accent);
-            outline-offset: 3px;
-            border-radius: 6px;
+        .glow {
+            position: absolute;
+            background: rgba(245, 184, 46, 0.05);
+            border-radius: 50%;
+            filter: blur(80px);
+        }
+        .glow-1 { top: 25%; left: -100px; width: 400px; height: 400px; }
+        .glow-2 { bottom: 25%; right: -100px; width: 400px; height: 400px; }
+
+        /* Layout & Typography */
+        main {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 48rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
-        /* Initial Entry Animation */
-        .fade-in-up {
-            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-            opacity: 0;
-            transform: translateY(20px);
+        /* Status Badge */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            margin-bottom: 2.5rem;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .status-dot {
+            position: relative;
+            display: flex;
+            height: 10px;
+            width: 10px;
+        }
+        .status-dot-ping {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            background-color: var(--brand-accent);
+            opacity: 0.75;
+            animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+        .status-dot-core {
+            position: relative;
+            border-radius: 50%;
+            height: 10px;
+            width: 10px;
+            background-color: var(--brand-accent);
+        }
+        .status-text {
+            color: var(--brand-accent);
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
         }
 
-        .delay-100 { animation-delay: 100ms; }
-        .delay-200 { animation-delay: 200ms; }
-        .delay-300 { animation-delay: 300ms; }
-        .delay-400 { animation-delay: 400ms; }
+        /* Headings & Text */
+        h1 {
+            font-size: clamp(2.25rem, 5vw, 4rem);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, var(--brand-accent), #ffdb7a, #ffffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+            padding-bottom: 0.25rem;
+        }
+        .subtitle-container {
+            max-width: 42rem;
+            margin: 0 auto 2.5rem auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .subtitle-1 {
+            color: #d1d5db;
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-weight: 300;
+            line-height: 1.6;
+        }
+        .subtitle-2 {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-weight: 500;
+            line-height: 1.6;
+        }
 
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
+        /* Glass Card */
+        .service-card {
+            width: 100%;
+            background: rgba(42, 36, 32, 0.8);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            padding: 2rem;
+            border-radius: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            margin-bottom: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        .service-card:hover {
+            border-color: rgba(245, 184, 46, 0.3);
+        }
+        @media (min-width: 640px) {
+            .service-card {
+                flex-direction: row;
+                text-align: left;
+                padding: 2rem;
+                gap: 1.5rem;
             }
         }
+        .icon-box {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.75rem;
+            background: rgba(245, 184, 46, 0.1);
+            border: 1px solid rgba(245, 184, 46, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .icon-box svg {
+            color: var(--brand-accent);
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        .service-text {
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.125rem;
+            letter-spacing: -0.01em;
+        }
 
-        /* Reduced Motion Fallback */
+        /* CTA Button */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background-color: var(--brand-accent);
+            color: var(--brand-dark);
+            padding: 1rem 2.5rem;
+            border-radius: 0.75rem;
+            font-weight: 800;
+            font-size: 1.125rem;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(245, 184, 46, 0.3);
+            transition: all 0.2s ease;
+            outline: none;
+        }
+        .cta-button:hover, .cta-button:focus-visible {
+            background-color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(245, 184, 46, 0.4);
+        }
+        .cta-button svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            transition: transform 0.2s ease;
+        }
+        .cta-button:hover svg {
+            transform: translateX(4px);
+        }
+        .cta-button:focus-visible {
+            box-shadow: 0 0 0 4px rgba(255,255,255,0.2), 0 8px 25px rgba(245, 184, 46, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        .footer-quote {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            font-style: italic;
+            font-weight: 300;
+            max-width: 32rem;
+            opacity: 0.8;
+        }
+        .footer-thanks {
+            color: var(--brand-accent);
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        /* Fast Animations */
+        @keyframes ping {
+            75%, 100% { transform: scale(2); opacity: 0; }
+        }
+        @keyframes fadeInUpFast {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-in {
+            animation: fadeInUpFast 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+        .delay-1 { animation-delay: 50ms; }
+        .delay-2 { animation-delay: 100ms; }
+        .delay-3 { animation-delay: 150ms; }
+        .delay-4 { animation-delay: 200ms; }
+
         @media (prefers-reduced-motion: reduce) {
-            .fade-in-up, .transition-all, .transition-transform, .animate-pulse, .animate-spin {
-                transition: none !important; animation: none !important; opacity: 1 !important; transform: none !important;
+            .animate-in, .status-dot-ping, .cta-button, .cta-button svg {
+                animation: none !important; transition: none !important; opacity: 1 !important; transform: none !important;
             }
         }
     </style>
 </head>
-<body class="antialiased font-sans selection:bg-brand-accent selection:text-brand-dark min-h-screen flex flex-col items-center justify-center relative p-4 md:p-8">
+<body>
 
-    <!-- Ambient Background Gradients (matching original institutional theme) -->
-    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden="true">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-gradient-to-b from-[#15110f] to-transparent"></div>
-        <div class="absolute top-1/4 -left-32 w-64 md:w-[500px] h-64 md:h-[500px] bg-brand-accent/5 rounded-full blur-[80px] md:blur-[120px]"></div>
-        <div class="absolute bottom-1/4 -right-32 w-64 md:w-[500px] h-64 md:h-[500px] bg-brand-accent/5 rounded-full blur-[80px] md:blur-[120px]"></div>
+    <!-- CSS-only Ambient Background -->
+    <div class="ambient-bg">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
     </div>
 
-    <!-- Main Content Container -->
-    <main class="relative z-10 w-full max-w-3xl mx-auto flex flex-col items-center text-center">
-        
+    <main>
         <!-- Status Indicator -->
-        <div class="fade-in-up inline-flex items-center gap-2.5 bg-white/5 border border-white/10 px-4 py-2 rounded-full mb-10 shadow-sm backdrop-blur-md">
-            <span class="relative flex h-2.5 w-2.5" aria-hidden="true">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-accent"></span>
+        <div class="status-badge animate-in">
+            <span class="status-dot">
+              <span class="status-dot-ping"></span>
+              <span class="status-dot-core"></span>
             </span>
-            <span class="text-brand-accent font-bold text-[10px] sm:text-xs uppercase tracking-[0.2em]">Website Status</span>
+            <span class="status-text">Website Status</span>
         </div>
 
         <!-- Main Typography -->
-        <h1 class="fade-in-up delay-100 text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-6 text-balance text-white leading-tight">
-            Website Currently <br class="hidden sm:block">
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-[#ffdb7a] to-white pb-1 inline-block">Unavailable.</span>
+        <h1 class="animate-in delay-1">
+            Website Currently <br>
+            <span class="text-gradient">Unavailable.</span>
         </h1>
         
         <!-- Supporting Copy -->
-        <div class="fade-in-up delay-200 max-w-2xl mx-auto space-y-4 mb-10">
-            <p class="text-gray-300 text-base md:text-lg lg:text-xl font-light text-pretty leading-relaxed">
+        <div class="subtitle-container animate-in delay-2">
+            <p class="subtitle-1">
                 We are currently reviewing the website and its ongoing maintenance requirements.
             </p>
-            <p class="text-gray-400 text-sm md:text-base font-medium text-pretty leading-relaxed">
+            <p class="subtitle-2">
                 If you are planning to continue, transfer, or rebuild this website, kindly get in touch to discuss the next steps.
             </p>
         </div>
 
         <!-- Service Card Section -->
-        <div class="fade-in-up delay-300 w-full bg-[#2a2420]/80 backdrop-blur-xl p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] border border-white/10 shadow-soft-dark relative overflow-hidden group hover:border-brand-accent/30 transition-colors duration-500 mb-10">
-            <div class="absolute -right-16 -top-16 w-32 h-32 bg-brand-accent/10 rounded-full blur-[40px] transition-all group-hover:bg-brand-accent/20"></div>
-            
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-center sm:text-left relative z-10">
-                <div class="w-12 h-12 rounded-xl bg-brand-accent/10 flex items-center justify-center shrink-0 border border-brand-accent/20">
-                    <i data-lucide="blocks" class="w-6 h-6 text-brand-accent" aria-hidden="true"></i>
-                </div>
-                <div>
-                    <h2 class="text-white font-bold text-lg md:text-xl tracking-tight">Website development, migration & maintenance services</h2>
-                </div>
+        <div class="service-card animate-in delay-3">
+            <div class="icon-box">
+                <!-- Embedded SVG for instant load (Blocks icon) -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="7" height="7" x="14" y="3" rx="1"></rect>
+                    <path d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3"></path>
+                </svg>
             </div>
+            <h2 class="service-text">Website development, migration & maintenance services</h2>
         </div>
 
         <!-- Call to Action -->
-        <div class="fade-in-up delay-400 w-full flex justify-center">
-            <a href="https://jasunngrowthsolutions.com/" 
-               class="inline-flex bg-brand-accent text-brand-dark px-8 md:px-10 py-4 md:py-4 rounded-xl font-extrabold text-base md:text-lg hover:bg-white transition-all duration-300 shadow-[0_5px_15px_rgba(245,184,46,0.3)] hover:shadow-[0_8px_25px_rgba(245,184,46,0.4)] items-center gap-3 group outline-none hover:-translate-y-1">
+        <div class="animate-in delay-4">
+            <a href="https://jasunngrowthsolutions.com/" class="cta-button">
                 <span>Discuss Your Website</span>
-                <i data-lucide="arrow-right" class="w-5 h-5 transition-transform group-hover:translate-x-1" aria-hidden="true"></i>
+                <!-- Embedded SVG for instant load (Arrow Right icon) -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                </svg>
             </a>
         </div>
 
         <!-- Closing Message -->
-        <footer class="fade-in-up delay-400 mt-16 md:mt-24 w-full pt-8 border-t border-white/10 flex flex-col items-center gap-2">
-            <p class="text-gray-400 text-xs md:text-sm italic font-light text-center max-w-lg text-balance opacity-80">
+        <footer class="animate-in delay-4">
+            <p class="footer-quote">
                 "A website may be built once, but keeping it running requires continued time, resources, and commitment."
             </p>
-            <p class="text-brand-accent text-[10px] md:text-xs font-bold uppercase tracking-widest mt-4">
+            <p class="footer-thanks">
                 Thank you for your understanding.
             </p>
         </footer>
-
     </main>
 
-    <!-- Initialize Lucide Icons -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
-        });
-    </script>
 </body>
 </html>
