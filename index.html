@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ravi Dhayal — Executive Advisory, Business Acquisition & Strategic Growth</title>
+  <meta name="description" content="Official portfolio and advisory practice of Ravi Dhayal. Specializing in high-impact business acquisition, strategic growth architecture, enterprise partnerships, and executive leadership." />
+  <link rel="canonical" href="https://ravidhayal.com" />
+
+  <!-- Favicon updated to Ravi Dhayal's photo -->
+  <link rel="icon" type="image/jpeg" href="assets/images/ravi.jpg" />
+  <link rel="apple-touch-icon" href="assets/images/ravi.jpg" />
+
+  <!-- Social Share / Open Graph Meta Tags using Ravi Dhayal's photo -->
+  <meta property="og:title" content="Ravi Dhayal — Executive Advisory & Business Acquisition" />
+  <meta property="og:description" content="Official portfolio of Ravi Dhayal. Specializing in M&A, business acquisition, strategic growth, and banking leadership." />
+  <meta property="og:image" content="assets/images/ravi.jpg" />
+  <meta property="og:url" content="https://ravidhayal.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ravi Dhayal — Executive Advisory & Business Acquisition" />
+  <meta name="twitter:image" content="assets/images/ravi.jpg" />
+
+  <!-- Google Fonts: Syne (Display), Plus Jakarta Sans (Body), JetBrains Mono (Accent/Metrics) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#08090C',
+            charcoal: '#101218',
+            surface: '#161922',
+            surfaceHover: '#1E222E',
+            borderSubtle: 'rgba(255, 255, 255, 0.08)',
+            borderHighlight: 'rgba(212, 175, 55, 0.35)',
+            gold: {
+              DEFAULT: '#D4AF37',
+              light: '#F3E5AB',
+              muted: '#9A7B2C',
+              glow: 'rgba(212, 175, 55, 0.14)'
+            },
+            ivory: '#F5F3EF',
+            slateMuted: '#9499A6'
+          },
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            serif: ['Instrument Serif', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --bg-primary: #08090C;
+      --bg-elevated: #101218;
+      --bg-card: #161922;
+      --text-primary: #F5F3EF;
+      --text-secondary: #9499A6;
+      --accent-gold: #D4AF37;
+      --accent-gold-soft: rgba(212, 175, 55, 0.12);
+      --border-hairline: rgba(255, 255, 255, 0.08);
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Subtle architectural grid and noise overlay */
+    .bg-architectural-grid {
+      background-size: 64px 64px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+    }
+
+    .ambient-glow {
+      background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.11) 0%, rgba(16, 18, 24, 0.04) 45%, transparent 75%);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #08090C;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #232734;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D4AF37;
+    }
+
+    /* Reveal Animations */
+    .reveal-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.75s var(--ease-out-expo), transform 0.75s var(--ease-out-expo);
+    }
+    .reveal-up.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .stagger-1 { transition-delay: 70ms; }
+    .stagger-2 { transition-delay: 140ms; }
+    .stagger-3 { transition-delay: 210ms; }
+    .stagger-4 { transition-delay: 280ms; }
+
+    /* Interactive Cards */
+    .premium-card {
+      background: linear-gradient(180deg, rgba(22, 25, 34, 0.88) 0%, rgba(16, 18, 24, 0.96) 100%);
+      border: 1px solid var(--border-hairline);
+      transition: transform 0.4s var(--ease-out-expo), border-color 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo);
+    }
+    .premium-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212, 175, 55, 0.38);
+      box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.75), 0 0 28px -8px rgba(212, 175, 55, 0.14);
+    }
+
+    /* Navigation Active Link Indicator — Fixed single-line geometry */
+    .nav-link {
+      position: relative;
+      white-space: nowrap;
+      transition: color 0.25s ease;
+      padding: 0.35rem 0;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--accent-gold);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.38s var(--ease-out-expo);
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+    .nav-link.active {
+      color: #F5F3EF;
+      font-weight: 600;
+    }
+
+    /* Button Micro-interaction */
+    .btn-gold {
+      background: linear-gradient(135deg, #E5C158 0%, #D4AF37 50%, #B58E24 100%);
+      color: #08090C;
+      white-space: nowrap;
+      transition: all 0.35s var(--ease-out-expo);
+    }
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px -6px rgba(212, 175, 55, 0.45);
+      filter: brightness(1.06);
+    }
+    .btn-gold:active {
+      transform: translateY(0);
+    }
+
+    /* Fixed Accordion — Eliminates clipping of first line when collapsed */
+    .faq-item {
+      transition: border-color 0.3s ease, background-color 0.3s ease;
+    }
+    .faq-item.is-open {
+      border-color: rgba(212, 175, 55, 0.35);
+      background-color: rgba(22, 25, 34, 0.95);
+    }
+    .accordion-content {
+      display: grid;
+      grid-template-rows: 0fr;
+      opacity: 0;
+      transition: grid-template-rows 0.38s var(--ease-out-expo), opacity 0.3s ease;
+    }
+    .accordion-content.open {
+      grid-template-rows: 1fr;
+      opacity: 1;
+    }
+    .accordion-inner {
+      min-height: 0;
+      overflow: hidden;
+    }
+    .accordion-body {
+      padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+
+    /* Infinite Seamless Institutional Logo Marquee */
+    .marquee-viewport {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    }
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee-scroll 36s linear infinite;
+    }
+    .marquee-viewport:hover .marquee-track {
+      animation-play-state: paused;
+    }
+    .marquee-group {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    @keyframes marquee-scroll {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        transform: translate3d(-50%, 0, 0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal-up {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+      .marquee-track {
+        animation: none !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+      }
+      * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-architectural-grid selection:bg-gold selection:text-obsidian">
+
+  <!-- Ambient Top Lighting -->
+  <div class="fixed inset-0 pointer-events-none ambient-glow z-0" aria-hidden="true"></div>
+
+  <!-- ================= HEADER & NAVIGATION (FIXED NO-WRAP ALIGNMENT) ================= -->
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-obsidian/85 backdrop-blur-xl border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo featuring Ravi Dhayal's photo instead of RD initials -->
+      <a href="#home" data-route="home" class="route-link group flex items-center gap-3 shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-lg">
+        <div class="w-10 h-10 rounded-xl bg-surface border border-gold/30 overflow-hidden flex items-center justify-center group-hover:border-gold transition-colors shadow-inner shrink-0">
+          <img src="assets/images/ravi.jpg" alt="Ravi Dhayal" class="w-full h-full object-cover object-top" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&q=80';" />
+        </div>
+        <div class="flex flex-col whitespace-nowrap shrink-0">
+          <span class="font-display font-bold text-sm sm:text-base tracking-tight text-ivory leading-none">RAVI DHAYAL</span>
+          <span class="font-mono text-[10px] tracking-widest uppercase text-slateMuted mt-1">Executive Advisory</span>
+        </div>
+      </a>
+
+      <!-- Desktop Route Links (Single-line whitespace-nowrap) -->
+      <nav aria-label="Main Navigation" class="hidden lg:flex items-center gap-6 xl:gap-8 shrink-0">
+        <a href="#home" data-route="home" class="route-link nav-link active text-sm font-medium text-slateMuted hover:text-ivory">Overview</a>
+        <a href="pages/about.html" data-route="about" class="route-link nav-link text-sm font-medium text-slateMuted hover:text-ivory">About</a>
+        <a href="#services" data-route="services" class="route-link nav-link text-sm font-medium text-slateMuted hover:text-ivory">Services</a>
+        <a href="pages/projects.html" data-route="projects" class="route-link nav-link text-sm font-medium text-slateMuted hover:text-ivory">Case Studies</a>
+        <a href="#process" data-route="process" class="route-link nav-link text-sm font-medium text-slateMuted hover:text-ivory">Methodology</a>
+        <a href="pages/testimonials.html" data-route="testimonials" class="route-link nav-link text-sm font-medium text-slateMuted hover:text-ivory">Testimonials</a>
+        <a href="#faq" data-route="faq" class="route-link nav-link text-sm font-medium text-slateMuted hover:text-ivory">FAQ</a>
+        <a href="pages/contact.html" data-route="contact" class="route-link nav-link text-sm font-medium text-slateMuted hover:text-ivory">Contact</a>
+      </nav>
+
+      <!-- Primary CTA (Fixed single-line pill button) -->
+      <div class="hidden lg:flex items-center gap-3 shrink-0">
+        <a href="pages/contact.html" data-route="contact" class="route-link btn-gold px-5 py-2.5 rounded-full font-display font-bold text-xs uppercase tracking-wider inline-flex items-center gap-2 shrink-0">
+          <span>Book Strategy Call</span>
+          <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+
+      <!-- Mobile & Tablet Menu Trigger -->
+      <button id="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false" class="lg:hidden p-2.5 rounded-xl bg-surface border border-white/10 text-ivory hover:border-gold/40 focus:outline-none shrink-0">
+        <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7h16M4 12h16M10 17h10"/>
+        </svg>
+        <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-drawer" class="lg:hidden hidden bg-charcoal/98 backdrop-blur-2xl border-b border-white/10 px-6 py-6 max-h-[calc(100vh-5rem)] overflow-y-auto">
+      <div class="flex flex-col space-y-3">
+        <a href="#home" data-route="home" class="route-link mobile-nav-link text-base font-medium text-ivory py-2 border-b border-white/5 flex items-center justify-between">
+          <span>Overview</span>
+          <span class="font-mono text-xs text-gold">00</span>
+        </a>
+        <a href="pages/about.html" data-route="about" class="route-link mobile-nav-link text-base font-medium text-slateMuted hover:text-ivory py-2 border-b border-white/5 flex items-center justify-between">
+          <span>About Ravi Dhayal</span>
+          <span class="font-mono text-xs text-slateMuted">01</span>
+        </a>
+        <a href="#services" data-route="services" class="route-link mobile-nav-link text-base font-medium text-slateMuted hover:text-ivory py-2 border-b border-white/5 flex items-center justify-between">
+          <span>Advisory Services</span>
+          <span class="font-mono text-xs text-slateMuted">02</span>
+        </a>
+        <a href="pages/projects.html" data-route="projects" class="route-link mobile-nav-link text-base font-medium text-slateMuted hover:text-ivory py-2 border-b border-white/5 flex items-center justify-between">
+          <span>Case Studies</span>
+          <span class="font-mono text-xs text-slateMuted">03</span>
+        </a>
+        <a href="#process" data-route="process" class="route-link mobile-nav-link text-base font-medium text-slateMuted hover:text-ivory py-2 border-b border-white/5 flex items-center justify-between">
+          <span>Methodology</span>
+          <span class="font-mono text-xs text-slateMuted">04</span>
+        </a>
+        <a href="pages/testimonials.html" data-route="testimonials" class="route-link mobile-nav-link text-base font-medium text-slateMuted hover:text-ivory py-2 border-b border-white/5 flex items-center justify-between">
+          <span>Testimonials</span>
+          <span class="font-mono text-xs text-slateMuted">05</span>
+        </a>
+        <a href="#faq" data-route="faq" class="route-link mobile-nav-link text-base font-medium text-slateMuted hover:text-ivory py-2 border-b border-white/5 flex items-center justify-between">
+          <span>Executive FAQ</span>
+          <span class="font-mono text-xs text-slateMuted">06</span>
+        </a>
+        <a href="pages/contact.html" data-route="contact" class="route-link mobile-nav-link text-base font-medium text-slateMuted hover:text-ivory py-2 flex items-center justify-between">
+          <span>Direct Contact</span>
+          <span class="font-mono text-xs text-slateMuted">07</span>
+        </a>
+        <div class="pt-3">
+          <a href="pages/contact.html" data-route="contact" class="route-link btn-gold w-full py-3.5 rounded-full font-display font-bold text-xs uppercase tracking-wider text-center block">
+            Book Strategy Call
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10 pt-20">
+
+    <!-- ================= DYNAMIC SUBPAGE BREADCRUMB BAR ================= -->
+    <div id="subpage-breadcrumb" class="hidden bg-charcoal/90 border-b border-white/10 py-3.5 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+        <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider">
+          <a href="#home" data-route="home" class="route-link text-slateMuted hover:text-gold transition-colors">Home</a>
+          <span class="text-white/20">/</span>
+          <span id="breadcrumb-current" class="text-gold font-semibold">Page View</span>
+        </nav>
+        <button id="return-full-overview" class="text-xs font-mono text-ivory/80 hover:text-gold inline-flex items-center gap-1.5 transition-colors">
+          <span>← View Complete Executive Dossier</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="home" data-page-section="home" class="relative min-h-[88vh] flex items-center py-14 lg:py-24 border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+          
+          <!-- Left Editorial Column -->
+          <div class="lg:col-span-7 space-y-7">
+            <div class="reveal-up inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-surface border border-gold/30">
+              <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+              <span class="font-mono text-xs uppercase tracking-widest text-gold-light">VP – Business Acquisition & Growth Strategist</span>
+            </div>
+
+            <h1 class="reveal-up stagger-1 font-display font-extrabold text-4xl sm:text-5xl lg:text-[62px] leading-[1.06] tracking-tight text-ivory">
+              Architecting <span class="font-serif italic font-normal text-gold">High-Conviction</span> Business Growth & Market Expansion.
+            </h1>
+
+            <p class="reveal-up stagger-2 text-slateMuted text-base sm:text-lg lg:text-xl max-w-2xl leading-relaxed font-normal">
+              Helping ambitious enterprises, M&A platforms, financial institutions, and founders scale revenue pipelines, structure strategic acquisitions, and build authoritative market presence.
+            </p>
+
+            <!-- Primary & Secondary CTAs -->
+            <div class="reveal-up stagger-3 flex flex-wrap items-center gap-4 pt-2">
+              <a href="#contact" data-route="contact" class="route-link btn-gold px-7 py-4 rounded-full font-display font-bold text-xs sm:text-sm uppercase tracking-wider inline-flex items-center gap-3">
+                <span>Schedule Discovery Session</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+              <a href="#projects" data-route="projects" class="route-link px-7 py-4 rounded-full bg-surface hover:bg-surfaceHover text-ivory border border-white/10 hover:border-gold/40 font-medium text-sm transition-all inline-flex items-center gap-2.5">
+                <span>Explore Case Studies</span>
+                <span class="font-mono text-xs px-2 py-0.5 rounded bg-gold/15 text-gold">06</span>
+              </a>
+            </div>
+
+            <!-- Key Executive Highlights -->
+            <div class="reveal-up stagger-4 pt-6 border-t border-white/10 grid grid-cols-3 gap-4 sm:gap-6 max-w-xl">
+              <div>
+                <p class="font-display font-bold text-2xl sm:text-3xl text-ivory">5<span class="text-gold">×</span></p>
+                <p class="text-xs text-slateMuted mt-1">Qualified Deal & Lead Velocity</p>
+              </div>
+              <div>
+                <p class="font-display font-bold text-2xl sm:text-3xl text-ivory">12<span class="text-gold">+</span> Yrs</p>
+                <p class="text-xs text-slateMuted mt-1">Banking, PropTech & M&A Leadership</p>
+              </div>
+              <div>
+                <p class="font-display font-bold text-2xl sm:text-3xl text-ivory">₹500<span class="text-gold">Cr+</span></p>
+                <p class="text-xs text-slateMuted mt-1">Cumulative Portfolio & Pipeline Impact</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Visual Composition -->
+          <div class="lg:col-span-5 reveal-up stagger-2">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              <div class="absolute -inset-3 rounded-3xl bg-gradient-to-b from-gold/20 via-transparent to-transparent blur-xl opacity-60 pointer-events-none"></div>
+              
+              <div class="relative rounded-2xl bg-charcoal border border-white/15 p-3 sm:p-4 shadow-2xl overflow-hidden">
+                <div class="relative aspect-[4/4.5] w-full rounded-xl overflow-hidden bg-surface group">
+                  <img
+                    src="assets/images/ravi.jpg"
+                    alt="Ravi Dhayal — VP Business Acquisition & Executive Growth Advisor"
+                    onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1000&q=85';"
+                    class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105 filter contrast-105"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/25 to-transparent"></div>
+
+                  <!-- Floating Executive Badge inside Portrait -->
+                  <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-obsidian/90 backdrop-blur-md border border-white/15 flex items-center justify-between gap-3">
+                    <div>
+                      <p class="font-mono text-[10px] uppercase tracking-widest text-gold">Current Executive Mandate</p>
+                      <p class="font-display font-bold text-sm sm:text-base text-ivory mt-0.5">Business Head (VP) — Business Acquisition</p>
+                      <p class="text-xs text-slateMuted">BusinessEx.com • M&A, Franchise & Strategic Growth</p>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center text-gold shrink-0">
+                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Bottom Credential Strip -->
+                <div class="mt-3 pt-2.5 px-2 flex items-center justify-between text-[11px] text-slateMuted font-mono">
+                  <span>GURUGRAM / DELHI NCR</span>
+                  <span class="text-emerald-400 flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                    OPEN FOR SELECT MANDATES
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= AUTHENTIC CONTINUOUSLY SCROLLING LOGO BAR WITH EXACT UPLOADED ASSETS ================= -->
+    <section id="institutions-marquee" data-page-section="home" aria-label="Proven Leadership Across Premier Institutions" class="py-12 bg-charcoal/75 border-b border-white/10 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-7">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="flex items-center gap-3">
+            <span class="w-2 h-2 rounded-full bg-gold"></span>
+            <p class="font-mono text-xs uppercase tracking-[0.2em] text-ivory/90 font-medium">
+              PROVEN LEADERSHIP & PEDIGREE ACROSS PREMIER INSTITUTIONS
+            </p>
+          </div>
+          <span class="font-mono text-[11px] text-slateMuted">Hover to pause • Official Banking & Corporate Assets</span>
+        </div>
+      </div>
+
+      <!-- Infinite Seamless Marquee Viewport -->
+      <div class="marquee-viewport">
+        <div class="marquee-track">
+          
+          <!-- GROUP 1 (Primary Sequence with exact correct filenames in proper order) -->
+          <div class="marquee-group">
+            
+            <!-- 1. BusinessEx.com -->
+            <div class="h-20 w-36 px-4 rounded-2xl bg-surface/95 border border-white/10 hover:border-gold/40 flex items-center justify-center shrink-0 transition-all shadow-md group">
+              <img src="assets/images/businessex.jpg.jpg" alt="BusinessEx.com" class="max-h-12 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/120x40/161922/D4AF37?text=BusinessEx';" />
+            </div>
+
+            <!-- 2. HDFC Bank -->
+            <div class="h-20 w-36 px-4 rounded-2xl bg-surface/95 border border-white/10 hover:border-gold/40 flex items-center justify-center shrink-0 transition-all shadow-md group">
+              <img src="assets/images/hdfc.png.png" alt="HDFC Bank" class="max-h-12 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/120x40/161922/D4AF37?text=HDFC+Bank';" />
+            </div>
+
+            <!-- 3. ICICI Bank -->
+            <div class="h-20 w-36 px-4 rounded-2xl bg-surface/95 border border-white/10 hover:border-gold/40 flex items-center justify-center shrink-0 transition-all shadow-md group">
+              <img src="assets/images/icici.png.png" alt="ICICI Bank" class="max-h-12 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/120x40/161922/D4AF37?text=ICICI+Bank';" />
+            </div>
+
+            <!-- 4. Kotak Mahindra Bank -->
+            <div class="h-20 w-36 px-4 rounded-2xl bg-surface/95 border border-white/10 hover:border-gold/40 flex items-center justify-center shrink-0 transition-all shadow-md group">
+              <img src="assets/images/kotak.png.png" alt="Kotak Mahindra Bank" class="max-h-12 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/130x40/161922/D4AF37?text=Kotak+Bank';" />
+            </div>
+
+            <!-- 5. IndusInd Bank / Indie -->
+            <div class="h-20 w-36 px-4 rounded-2xl bg-surface/95 border border-white/10 hover:border-gold/40 flex items-center justify-center shrink-0 transition-all shadow-md group">
+              <img src="assets/images/indus.png.png" alt="IndusInd Bank" class="max-h-12 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/130x40/161922/D4AF37?text=IndusInd';" />
+            </div>
+
+            <!-- 6. Square Yards -->
+            <div class="h-20 w-36 px-4 rounded-2xl bg-surface/95 border border-white/10 hover:border-gold/40 flex items-center justify-center shrink-0 transition-all shadow-md group">
+              <img src="assets/images/squareyards.jpg.jpg" alt="Square Yards" class="max-h-12 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/130x40/161922/D4AF37?text=Square+Yards';" />
+            </div>
+
+          </div>
+
+          <!-- GROUP 2 (Exact Duplicate Sequence for Seamless Infinite Loop) -->
+          <div class="marquee-group" aria-hidden="true">
+            
+            <!-- 1. BusinessEx.com -->
+            <div class="h-20 w-36 px-4 rounded-2xl bg-surface/95 border border-white/10 hover:border-gold/40 flex items-center justify-center shrink-0 transition-all shadow-md">
+              <img src="assets/images/businessex.jpg.jpg" alt="BusinessEx.com" class="max-h-12 w-auto object-contain" />
+            </div>
+
+            <!-- 2. HDFC Bank -->
+            <div class="h-20 w-36 px-4 rounded-2xl bg-surface/95 border border-white/10 hover:border-gold/40 flex items-center justify-center shrink-0 transition-all shadow-md">
+              <img src="assets/images/hdfc.png.png" alt="HDFC Bank" class="max-h-12 w-auto object-contain" />
+            </div>
+
+            <!-- 3. ICICI Bank -->
+            <div class="h-20 w-36 px-4 rounded-2xl bg-surface/95 border border-white/10 hover:border-gold/40 flex items-center justify-center shrink-0 transition-all shadow-md">
+              <img src="assets/images/icici.png.png" alt="ICICI Bank" class="max-h-12 w-auto object-contain" />
+            </div>
+
+            <!-- 4. Kotak Mahindra Bank -->
+            <div class="h-20 w-36 px-4 rounded-2xl bg-surface/95 border border-white/10 hover:border-gold/40 flex items-center justify-center shrink-0 transition-all shadow-md">
+              <img src="assets/images/kotak.png.png" alt="Kotak Mahindra Bank" class="max-h-12 w-auto object-contain" />
+            </div>
+
+            <!-- 5. IndusInd Bank / Indie -->
+            <div class="h-20 w-36 px-4 rounded-2xl bg-surface/95 border border-white/10 hover:border-gold/40 flex items-center justify-center shrink-0 transition-all shadow-md">
+              <img src="assets/images/indus.png.png" alt="IndusInd Bank" class="max-h-12 w-auto object-contain" />
+            </div>
+
+            <!-- 6. Square Yards -->
+            <div class="h-20 w-36 px-4 rounded-2xl bg-surface/95 border border-white/10 hover:border-gold/40 flex items-center justify-center shrink-0 transition-all shadow-md">
+              <img src="assets/images/squareyards.jpg.jpg" alt="Square Yards" class="max-h-12 w-auto object-contain" />
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT & EXECUTIVE BIOGRAPHY ================= -->
+    <section id="about" data-page-section="about" class="py-24 lg:py-32 border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <!-- Section Label & Summary -->
+          <div class="lg:col-span-5 reveal-up">
+            <span class="font-mono text-xs uppercase tracking-widest text-gold block mb-3">01 / Executive Profile (About Us)</span>
+            <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-ivory tracking-tight leading-[1.12]">
+              Bridging Institutional Discipline with <span class="font-serif italic font-normal text-gold">Entrepreneurial</span> Speed.
+            </h2>
+            <p class="mt-6 text-slateMuted text-base leading-relaxed">
+              Over a career spanning premier Indian banking institutions, high-velocity real estate marketplaces, and business acquisition platforms, Ravi Dhayal has built a reputation for turning complex market opportunities into predictable revenue engines.
+            </p>
+
+            <!-- Core Pillars Card -->
+            <div class="mt-8 p-6 rounded-2xl bg-surface border border-white/10 space-y-4">
+              <h3 class="font-mono text-xs uppercase tracking-wider text-gold">Core Advisory Pillars</h3>
+              <ul class="space-y-3 text-sm text-ivory/90">
+                <li class="flex items-start gap-3">
+                  <span class="text-gold mt-0.5">✦</span>
+                  <span><strong>Business Acquisition & M&A Origination:</strong> Structuring buy-side and sell-side mandates, valuation positioning, and investor matchmaking.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-gold mt-0.5">✦</span>
+                  <span><strong>Revenue & Channel Architecture:</strong> Building high-performing B2B/B2C sales ecosystems that consistently multiply qualified deal flow.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-gold mt-0.5">✦</span>
+                  <span><strong>Executive Personal Branding & Consulting:</strong> Advising founders and CXOs on market positioning, digital authority, and high-ticket client acquisition.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right Column: Career Trajectory & Capabilities -->
+          <div class="lg:col-span-7 space-y-6 reveal-up stagger-1">
+            <div class="p-7 sm:p-8 rounded-2xl premium-card">
+              <div class="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-white/10">
+                <div>
+                  <span class="font-mono text-xs text-gold uppercase">Executive Leadership • Present</span>
+                  <h3 class="font-display font-bold text-xl text-ivory mt-0.5">Business Head (VP) – Business Acquisition</h3>
+                </div>
+                <span class="px-3.5 py-1 rounded-full text-xs font-mono bg-gold/10 text-gold border border-gold/25">BusinessEx.com</span>
+              </div>
+              <p class="mt-4 text-slateMuted text-sm sm:text-base leading-relaxed">
+                Spearheading national business acquisition initiatives, onboarding mid-market businesses, startups, and franchise networks for strategic exits, joint ventures, and institutional capital infusion.
+              </p>
+            </div>
+
+            <div class="p-7 sm:p-8 rounded-2xl premium-card">
+              <div class="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-white/10">
+                <div>
+                  <span class="font-mono text-xs text-slateMuted uppercase">PropTech & Real Estate Advisory</span>
+                  <h3 class="font-display font-bold text-xl text-ivory mt-0.5">Senior Growth & Portfolio Leadership</h3>
+                </div>
+                <span class="px-3.5 py-1 rounded-full text-xs font-mono bg-white/5 text-ivory/80 border border-white/10">Square Yards</span>
+              </div>
+              <p class="mt-4 text-slateMuted text-sm sm:text-base leading-relaxed">
+                Directed high-value real estate investment advisory, Tier-1 developer partnerships, and cross-border HNI/NRI client acquisition across primary metropolitan corridors.
+              </p>
+            </div>
+
+            <div class="p-7 sm:p-8 rounded-2xl premium-card">
+              <div class="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-white/10">
+                <div>
+                  <span class="font-mono text-xs text-slateMuted uppercase">Banking & Financial Services Foundation</span>
+                  <h3 class="font-display font-bold text-xl text-ivory mt-0.5">Wealth, Corporate & Retail Banking Operations</h3>
+                </div>
+                <span class="px-3.5 py-1 rounded-full text-xs font-mono bg-white/5 text-ivory/80 border border-white/10">ICICI • Kotak • IndusInd • HDFC</span>
+              </div>
+              <p class="mt-4 text-slateMuted text-sm sm:text-base leading-relaxed">
+                Forged deep expertise in credit assessment, corporate relationship management, wealth advisory, and regulatory compliance across India's foremost private sector banks.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES & STRATEGIC CAPABILITIES ================= -->
+    <section id="services" data-page-section="services" class="py-24 lg:py-32 bg-charcoal/40 border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 reveal-up">
+          <div>
+            <span class="font-mono text-xs uppercase tracking-widest text-gold block mb-3">02 / Advisory Domains & Services</span>
+            <h2 class="font-display font-bold text-3xl sm:text-5xl text-ivory tracking-tight">
+              Where We Create <span class="font-serif italic font-normal text-gold">Asymmetric</span> Value
+            </h2>
+          </div>
+          <p class="text-slateMuted max-w-md text-sm sm:text-base">
+            Tailored engagements designed for business owners preparing for scale or exit, investors seeking vetted deal flow, and B2B organizations upgrading their acquisition engine.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <!-- Service 1 -->
+          <div class="premium-card rounded-2xl p-8 flex flex-col justify-between reveal-up">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold mb-6 font-mono text-sm font-semibold">
+                01
+              </div>
+              <h3 class="font-display font-bold text-2xl text-ivory mb-3">Business Acquisition & Exit Readiness</h3>
+              <p class="text-slateMuted text-sm leading-relaxed mb-6">
+                End-to-end commercialization and deal structuring for founders looking to raise strategic capital, divest, or acquire complementary businesses.
+              </p>
+              <ul class="space-y-2.5 pt-6 border-t border-white/10 text-xs font-mono text-ivory/80 mb-6">
+                <li class="flex items-center gap-2"><span class="text-gold">→</span> Deal Origination & Valuation Narrative</li>
+                <li class="flex items-center gap-2"><span class="text-gold">→</span> Strategic Buyer & Investor Syndication</li>
+                <li class="flex items-center gap-2"><span class="text-gold">→</span> Franchise & Distribution Expansion</li>
+              </ul>
+            </div>
+            <button data-service-id="service-1" class="open-service-modal w-full py-3 px-4 rounded-xl bg-surface hover:bg-gold hover:text-obsidian border border-white/10 hover:border-gold text-xs font-mono uppercase tracking-wider text-gold transition-all flex items-center justify-between">
+              <span>Inspect Mandate Blueprint</span>
+              <span>→</span>
+            </button>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="premium-card rounded-2xl p-8 flex flex-col justify-between reveal-up stagger-1">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold mb-6 font-mono text-sm font-semibold">
+                02
+              </div>
+              <h3 class="font-display font-bold text-2xl text-ivory mb-3">High-Velocity GTM & Lead Architecture</h3>
+              <p class="text-slateMuted text-sm leading-relaxed mb-6">
+                Transforming static corporate pipelines into automated, high-conversion acquisition funnels that consistently generate qualified inbound and outbound opportunities.
+              </p>
+              <ul class="space-y-2.5 pt-6 border-t border-white/10 text-xs font-mono text-ivory/80 mb-6">
+                <li class="flex items-center gap-2"><span class="text-gold">→</span> High-Ticket Funnel & CRM Engineering</li>
+                <li class="flex items-center gap-2"><span class="text-gold">→</span> Sales Team Playbooks & KPI Governance</li>
+                <li class="flex items-center gap-2"><span class="text-gold">→</span> Direct Conversion & WhatsApp Workflows</li>
+              </ul>
+            </div>
+            <button data-service-id="service-2" class="open-service-modal w-full py-3 px-4 rounded-xl bg-surface hover:bg-gold hover:text-obsidian border border-white/10 hover:border-gold text-xs font-mono uppercase tracking-wider text-gold transition-all flex items-center justify-between">
+              <span>Inspect Mandate Blueprint</span>
+              <span>→</span>
+            </button>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="premium-card rounded-2xl p-8 flex flex-col justify-between reveal-up stagger-2">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold mb-6 font-mono text-sm font-semibold">
+                03
+              </div>
+              <h3 class="font-display font-bold text-2xl text-ivory mb-3">Institutional Banking & Real Estate Advisory</h3>
+              <p class="text-slateMuted text-sm leading-relaxed mb-6">
+                Leveraging over a decade of banking and real estate network equity to structure commercial assets, debt syndication, and portfolio diversification.
+              </p>
+              <ul class="space-y-2.5 pt-6 border-t border-white/10 text-xs font-mono text-ivory/80 mb-6">
+                <li class="flex items-center gap-2"><span class="text-gold">→</span> Commercial & Yield Asset Advisory</li>
+                <li class="flex items-center gap-2"><span class="text-gold">→</span> Institutional Banking Partnerships</li>
+                <li class="flex items-center gap-2"><span class="text-gold">→</span> HNI Portfolio Structuring</li>
+              </ul>
+            </div>
+            <button data-service-id="service-3" class="open-service-modal w-full py-3 px-4 rounded-xl bg-surface hover:bg-gold hover:text-obsidian border border-white/10 hover:border-gold text-xs font-mono uppercase tracking-wider text-gold transition-all flex items-center justify-between">
+              <span>Inspect Mandate Blueprint</span>
+              <span>→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PORTFOLIO & CASE STUDIES ================= -->
+    <section id="projects" data-page-section="projects" class="py-24 lg:py-32 border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 reveal-up">
+          <div>
+            <span class="font-mono text-xs uppercase tracking-widest text-gold block mb-3">03 / Selected Mandates & Projects</span>
+            <h2 class="font-display font-bold text-3xl sm:text-5xl text-ivory tracking-tight">
+              Proven <span class="font-serif italic font-normal text-gold">Execution</span> & Case Studies
+            </h2>
+          </div>
+
+          <!-- Category Filter Buttons -->
+          <div class="flex flex-wrap gap-2" role="tablist" aria-label="Filter Case Studies">
+            <button data-filter="all" class="project-filter-btn active px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider bg-gold text-obsidian font-semibold transition-all">All Mandates (06)</button>
+            <button data-filter="acquisition" class="project-filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider bg-surface text-slateMuted hover:text-ivory border border-white/10 transition-all">M&A / Acquisition</button>
+            <button data-filter="growth" class="project-filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider bg-surface text-slateMuted hover:text-ivory border border-white/10 transition-all">Revenue Growth</button>
+            <button data-filter="realtor" class="project-filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider bg-surface text-slateMuted hover:text-ivory border border-white/10 transition-all">PropTech & Banking</button>
+          </div>
+        </div>
+
+        <!-- Projects Grid (6 Case Studies) -->
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Project 1 -->
+          <article data-category="acquisition" class="project-card premium-card rounded-2xl overflow-hidden flex flex-col justify-between group reveal-up">
+            <div>
+              <div class="relative h-52 overflow-hidden bg-charcoal">
+                <img 
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80" 
+                  alt="Enterprise Business Acquisition Pipeline" 
+                  loading="lazy"
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-80"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
+                <div class="absolute top-4 left-4">
+                  <span class="px-3 py-1 rounded-full text-[10px] font-mono uppercase bg-obsidian/85 backdrop-blur-md text-gold border border-gold/30">M&A Origination</span>
+                </div>
+                <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded-md bg-obsidian/90 border border-white/10 font-mono text-xs text-ivory">
+                  3.8× Pipeline Expansion
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display font-bold text-xl text-ivory group-hover:text-gold transition-colors">
+                  Mid-Market Business Acquisition & Deal Onboarding Engine
+                </h3>
+                <p class="mt-3 text-slateMuted text-sm leading-relaxed">
+                  Architected a structured acquisition onboarding framework connecting verified business sellers, franchises, and institutional buyers across India.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-4 border-t border-white/5 flex items-center justify-between">
+              <div class="text-xs font-mono text-slateMuted">MANDATE: <span class="text-ivory">BusinessEx.com</span></div>
+              <button data-modal-id="modal-1" class="open-project-modal text-xs font-mono uppercase tracking-wider text-gold hover:underline inline-flex items-center gap-1">
+                <span>Examine</span>
+                <span>→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article data-category="growth" class="project-card premium-card rounded-2xl overflow-hidden flex flex-col justify-between group reveal-up stagger-1">
+            <div>
+              <div class="relative h-52 overflow-hidden bg-charcoal">
+                <img 
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" 
+                  alt="Executive Personal Brand & Lead Generation Transformation" 
+                  loading="lazy"
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-80"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
+                <div class="absolute top-4 left-4">
+                  <span class="px-3 py-1 rounded-full text-[10px] font-mono uppercase bg-obsidian/85 backdrop-blur-md text-gold border border-gold/30">Digital Authority</span>
+                </div>
+                <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded-md bg-obsidian/90 border border-white/10 font-mono text-xs text-emerald-400">
+                  5× Qualified Leads
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display font-bold text-xl text-ivory group-hover:text-gold transition-colors">
+                  High-Converting Executive Advisory & Inbound Lead System
+                </h3>
+                <p class="mt-3 text-slateMuted text-sm leading-relaxed">
+                  Repositioned digital presence and search authority to capture high-intent consulting and acquisition inquiries via automated discovery workflows.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-4 border-t border-white/5 flex items-center justify-between">
+              <div class="text-xs font-mono text-slateMuted">OUTCOME: <span class="text-ivory">5× Inbound Velocity</span></div>
+              <button data-modal-id="modal-2" class="open-project-modal text-xs font-mono uppercase tracking-wider text-gold hover:underline inline-flex items-center gap-1">
+                <span>Examine</span>
+                <span>→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article data-category="realtor" class="project-card premium-card rounded-2xl overflow-hidden flex flex-col justify-between group reveal-up stagger-2">
+            <div>
+              <div class="relative h-52 overflow-hidden bg-charcoal">
+                <img 
+                  src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=80" 
+                  alt="Commercial Real Estate & HNI Investment Advisory" 
+                  loading="lazy"
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-80"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
+                <div class="absolute top-4 left-4">
+                  <span class="px-3 py-1 rounded-full text-[10px] font-mono uppercase bg-obsidian/85 backdrop-blur-md text-gold border border-gold/30">PropTech Advisory</span>
+                </div>
+                <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded-md bg-obsidian/90 border border-white/10 font-mono text-xs text-ivory">
+                  HNI & NRI Desk
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display font-bold text-xl text-ivory group-hover:text-gold transition-colors">
+                  Primary & Commercial Real Estate Distribution Architecture
+                </h3>
+                <p class="mt-3 text-slateMuted text-sm leading-relaxed">
+                  Scaled high-ticket residential and commercial asset advisory teams, establishing preferred channel mandates with Tier-1 developers.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-4 border-t border-white/5 flex items-center justify-between">
+              <div class="text-xs font-mono text-slateMuted">PARTNER: <span class="text-ivory">Square Yards</span></div>
+              <button data-modal-id="modal-3" class="open-project-modal text-xs font-mono uppercase tracking-wider text-gold hover:underline inline-flex items-center gap-1">
+                <span>Examine</span>
+                <span>→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article data-category="realtor" class="project-card premium-card rounded-2xl overflow-hidden flex flex-col justify-between group reveal-up">
+            <div>
+              <div class="relative h-52 overflow-hidden bg-charcoal">
+                <img 
+                  src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=900&q=80" 
+                  alt="Corporate Banking & Wealth Relationship Expansion" 
+                  loading="lazy"
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-80"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
+                <div class="absolute top-4 left-4">
+                  <span class="px-3 py-1 rounded-full text-[10px] font-mono uppercase bg-obsidian/85 backdrop-blur-md text-gold border border-gold/30">Private Banking</span>
+                </div>
+                <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded-md bg-obsidian/90 border border-white/10 font-mono text-xs text-ivory">
+                  Top Decile Retention
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display font-bold text-xl text-ivory group-hover:text-gold transition-colors">
+                  SME Credit, Wealth & Corporate Treasury Portfolio Scaling
+                </h3>
+                <p class="mt-3 text-slateMuted text-sm leading-relaxed">
+                  Built and managed high-margin corporate and retail banking books across ICICI, Kotak Mahindra, HDFC, and IndusInd Bank with rigorous risk underwriting.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-4 border-t border-white/5 flex items-center justify-between">
+              <div class="text-xs font-mono text-slateMuted">SECTOR: <span class="text-ivory">Institutional Banking</span></div>
+              <button data-modal-id="modal-4" class="open-project-modal text-xs font-mono uppercase tracking-wider text-gold hover:underline inline-flex items-center gap-1">
+                <span>Examine</span>
+                <span>→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article data-category="acquisition" class="project-card premium-card rounded-2xl overflow-hidden flex flex-col justify-between group reveal-up stagger-1">
+            <div>
+              <div class="relative h-52 overflow-hidden bg-charcoal">
+                <img 
+                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80" 
+                  alt="Franchise & Multi-City Retail Expansion" 
+                  loading="lazy"
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-80"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
+                <div class="absolute top-4 left-4">
+                  <span class="px-3 py-1 rounded-full text-[10px] font-mono uppercase bg-obsidian/85 backdrop-blur-md text-gold border border-gold/30">Franchise Syndication</span>
+                </div>
+                <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded-md bg-obsidian/90 border border-white/10 font-mono text-xs text-ivory">
+                  Pan-India Rollout
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display font-bold text-xl text-ivory group-hover:text-gold transition-colors">
+                  Master Franchise & Multi-Region Distribution Syndication
+                </h3>
+                <p class="mt-3 text-slateMuted text-sm leading-relaxed">
+                  Structured unit-economics and master franchise investor onboarding for high-growth consumer, F&B, and healthcare brands expanding across Tier-1 & Tier-2 cities.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-4 border-t border-white/5 flex items-center justify-between">
+              <div class="text-xs font-mono text-slateMuted">FOCUS: <span class="text-ivory">Channel Expansion</span></div>
+              <button data-modal-id="modal-5" class="open-project-modal text-xs font-mono uppercase tracking-wider text-gold hover:underline inline-flex items-center gap-1">
+                <span>Examine</span>
+                <span>→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article data-category="growth" class="project-card premium-card rounded-2xl overflow-hidden flex flex-col justify-between group reveal-up stagger-2">
+            <div>
+              <div class="relative h-52 overflow-hidden bg-charcoal">
+                <img 
+                  src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80" 
+                  alt="B2B Sales Team Transformation" 
+                  loading="lazy"
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-80"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
+                <div class="absolute top-4 left-4">
+                  <span class="px-3 py-1 rounded-full text-[10px] font-mono uppercase bg-obsidian/85 backdrop-blur-md text-gold border border-gold/30">Revenue Operations</span>
+                </div>
+                <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded-md bg-obsidian/90 border border-white/10 font-mono text-xs text-emerald-400">
+                  +64% Conversion Rate
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display font-bold text-xl text-ivory group-hover:text-gold transition-colors">
+                  Enterprise Inside-Sales & Advisory Desk Transformation
+                </h3>
+                <p class="mt-3 text-slateMuted text-sm leading-relaxed">
+                  Overhauled consultative selling scripts, CRM pipeline stages, and leadership KPIs for a 45-member advisory division to compress deal cycles.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-4 border-t border-white/5 flex items-center justify-between">
+              <div class="text-xs font-mono text-slateMuted">FOCUS: <span class="text-ivory">RevOps & Training</span></div>
+              <button data-modal-id="modal-6" class="open-project-modal text-xs font-mono uppercase tracking-wider text-gold hover:underline inline-flex items-center gap-1">
+                <span>Examine</span>
+                <span>→</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= METHODOLOGY ================= -->
+    <section id="process" data-page-section="process" class="py-24 lg:py-32 bg-charcoal/40 border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-16 reveal-up">
+          <span class="font-mono text-xs uppercase tracking-widest text-gold block mb-3">04 / Execution Framework</span>
+          <h2 class="font-display font-bold text-3xl sm:text-5xl text-ivory tracking-tight">
+            How Strategic <span class="font-serif italic font-normal text-gold">Mandates</span> Unfold
+          </h2>
+          <p class="mt-4 text-slateMuted text-base">
+            Every engagement follows a disciplined four-stage operating cadence—eliminating ambiguity and compressing the timeline from initial diagnosis to measurable commercial outcomes.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-7 rounded-2xl premium-card relative reveal-up">
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-mono text-xs text-gold uppercase tracking-widest">Phase 01</span>
+              <span class="w-8 h-8 rounded-lg bg-gold/10 text-gold font-mono text-xs flex items-center justify-center">01</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-ivory mb-3">Commercial Diagnostic</h3>
+            <p class="text-sm text-slateMuted leading-relaxed">
+              Deep-dive audit into unit economics, current acquisition bottlenecks, valuation drivers, and competitive positioning.
+            </p>
+          </div>
+
+          <div class="p-7 rounded-2xl premium-card relative reveal-up stagger-1">
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-mono text-xs text-gold uppercase tracking-widest">Phase 02</span>
+              <span class="w-8 h-8 rounded-lg bg-gold/10 text-gold font-mono text-xs flex items-center justify-center">02</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-ivory mb-3">Thesis & Deal Structuring</h3>
+            <p class="text-sm text-slateMuted leading-relaxed">
+              Crafting the investment memorandum, buyer/partner target list, or high-converting go-to-market funnel architecture.
+            </p>
+          </div>
+
+          <div class="p-7 rounded-2xl premium-card relative reveal-up stagger-2">
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-mono text-xs text-gold uppercase tracking-widest">Phase 03</span>
+              <span class="w-8 h-8 rounded-lg bg-gold/10 text-gold font-mono text-xs flex items-center justify-center">03</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-ivory mb-3">Market Activation</h3>
+            <p class="text-sm text-slateMuted leading-relaxed">
+              Direct outreach to institutional networks, counterparty negotiations, and rigorous pipeline qualification.
+            </p>
+          </div>
+
+          <div class="p-7 rounded-2xl premium-card relative reveal-up stagger-3">
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-mono text-xs text-gold uppercase tracking-widest">Phase 04</span>
+              <span class="w-8 h-8 rounded-lg bg-gold/10 text-gold font-mono text-xs flex items-center justify-center">04</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-ivory mb-3">Closure & Scale Governance</h3>
+            <p class="text-sm text-slateMuted leading-relaxed">
+              Transaction diligence support, team handover, and ongoing KPI tracking to lock in sustainable long-term growth.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section id="testimonials" data-page-section="testimonials" class="py-24 lg:py-32 border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 reveal-up">
+          <div>
+            <span class="font-mono text-xs uppercase tracking-widest text-gold block mb-3">05 / Executive Endorsements</span>
+            <h2 class="font-display font-bold text-3xl sm:text-5xl text-ivory tracking-tight">
+              Trusted by <span class="font-serif italic font-normal text-gold">Founders</span>, CXOs & Investors
+            </h2>
+          </div>
+          <p class="text-slateMuted max-w-md text-sm sm:text-base">
+            Direct perspectives from business owners, strategic partners, and institutional leaders who have collaborated with Ravi Dhayal.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <blockquote class="premium-card p-8 rounded-2xl flex flex-col justify-between reveal-up">
+            <div>
+              <div class="flex items-center gap-1 text-gold mb-6" aria-label="5 out of 5 stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <p class="text-ivory/90 leading-relaxed italic font-serif text-xl">
+                “Ravi brings a rare combination of banking rigor and aggressive commercial instincts. When we structured our business acquisition mandate, his clarity on valuation and counterparty qualification saved us months of dead-end conversations.”
+              </p>
+            </div>
+            <footer class="mt-8 pt-5 border-t border-white/10 flex items-center justify-between gap-2">
+              <div>
+                <cite class="not-italic font-display font-bold text-sm text-ivory block">Managing Director</cite>
+                <span class="text-xs text-slateMuted">Mid-Market Manufacturing Enterprise, NCR</span>
+              </div>
+              <span class="font-mono text-[11px] text-gold bg-gold/10 px-2.5 py-1 rounded shrink-0">M&A Mandate</span>
+            </footer>
+          </blockquote>
+
+          <!-- Testimonial 2 -->
+          <blockquote class="premium-card p-8 rounded-2xl flex flex-col justify-between reveal-up stagger-1">
+            <div>
+              <div class="flex items-center gap-1 text-gold mb-6" aria-label="5 out of 5 stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <p class="text-ivory/90 leading-relaxed italic font-serif text-xl">
+                “Working with Ravi transformed how we approach client acquisition. Within the first quarter of implementing his structured outbound and inbound qualification cadence, our qualified deal pipeline expanded fivefold.”
+              </p>
+            </div>
+            <footer class="mt-8 pt-5 border-t border-white/10 flex items-center justify-between gap-2">
+              <div>
+                <cite class="not-italic font-display font-bold text-sm text-ivory block">Founder & Principal Consultant</cite>
+                <span class="text-xs text-slateMuted">B2B Growth & Advisory Practice</span>
+              </div>
+              <span class="font-mono text-[11px] text-gold bg-gold/10 px-2.5 py-1 rounded shrink-0">5× Lead Growth</span>
+            </footer>
+          </blockquote>
+
+          <!-- Testimonial 3 -->
+          <blockquote class="premium-card p-8 rounded-2xl flex flex-col justify-between reveal-up stagger-2">
+            <div>
+              <div class="flex items-center gap-1 text-gold mb-6" aria-label="5 out of 5 stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <p class="text-ivory/90 leading-relaxed italic font-serif text-xl">
+                “Having collaborated with Ravi across high-ticket real estate and financial portfolios, his transparency and relationship equity stand out immediately. Clients trust him because he prioritizes long-term capital preservation and real yield.”
+              </p>
+            </div>
+            <footer class="mt-8 pt-5 border-t border-white/10 flex items-center justify-between gap-2">
+              <div>
+                <cite class="not-italic font-display font-bold text-sm text-ivory block">Regional Vice President</cite>
+                <span class="text-xs text-slateMuted">Institutional Wealth & PropTech Partner</span>
+              </div>
+              <span class="font-mono text-[11px] text-gold bg-gold/10 px-2.5 py-1 rounded shrink-0">Portfolio Advisory</span>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section id="faq" data-page-section="faq" class="py-24 bg-charcoal/40 border-b border-white/5">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14 reveal-up">
+          <span class="font-mono text-xs uppercase tracking-widest text-gold block mb-3">06 / Executive FAQ</span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-ivory">Common Advisory Questions</h2>
+          <p class="mt-3 text-sm text-slateMuted">Clear answers regarding mandate structure, confidentiality, and engagement models.</p>
+        </div>
+
+        <div class="space-y-4 reveal-up stagger-1" id="faq-accordion">
+          <!-- FAQ Item 1 -->
+          <div class="faq-item is-open rounded-2xl bg-surface border border-white/10 overflow-hidden">
+            <button type="button" class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="true">
+              <span class="font-display font-bold text-base sm:text-lg text-ivory">What types of businesses and founders do you typically advise?</span>
+              <span class="faq-icon w-8 h-8 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold font-mono text-lg transition-transform duration-300 rotate-45 shrink-0">+</span>
+            </button>
+            <div class="accordion-content open">
+              <div class="accordion-inner">
+                <div class="accordion-body text-sm sm:text-base text-slateMuted leading-relaxed border-t border-white/5 pt-4">
+                  I primarily partner with established SMB and mid-market founders looking to scale or exit via strategic acquisition, institutional investors seeking curated deal flow, and high-growth B2B or real estate enterprises looking to professionalize their revenue acquisition engines.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-item rounded-2xl bg-surface border border-white/10 overflow-hidden">
+            <button type="button" class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
+              <span class="font-display font-bold text-base sm:text-lg text-ivory">How do we initiate a business acquisition or exit mandate?</span>
+              <span class="faq-icon w-8 h-8 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold font-mono text-lg transition-transform duration-300 shrink-0">+</span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-inner">
+                <div class="accordion-body text-sm sm:text-base text-slateMuted leading-relaxed border-t border-white/5 pt-4">
+                  Every mandate begins with a confidential discovery session under strict non-disclosure protocols. We review your financials, growth trajectory, and strategic objectives before structuring a formal onboarding roadmap and matching you with vetted institutional or strategic counterparties.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-item rounded-2xl bg-surface border border-white/10 overflow-hidden">
+            <button type="button" class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
+              <span class="font-display font-bold text-base sm:text-lg text-ivory">Are you available for board advisory or fractional VP growth engagements?</span>
+              <span class="faq-icon w-8 h-8 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold font-mono text-lg transition-transform duration-300 shrink-0">+</span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-inner">
+                <div class="accordion-body text-sm sm:text-base text-slateMuted leading-relaxed border-t border-white/5 pt-4">
+                  Yes. Alongside full-scope business acquisition leadership at BusinessEx.com, I allocate select bandwidth each quarter for strategic board advisory and fractional revenue architecture mandates with high-conviction founders.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq-item rounded-2xl bg-surface border border-white/10 overflow-hidden">
+            <button type="button" class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
+              <span class="font-display font-bold text-base sm:text-lg text-ivory">How are advisory retainers and transaction mandates structured?</span>
+              <span class="faq-icon w-8 h-8 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold font-mono text-lg transition-transform duration-300 shrink-0">+</span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-inner">
+                <div class="accordion-body text-sm sm:text-base text-slateMuted leading-relaxed border-t border-white/5 pt-4">
+                  Engagements are structured around clear commercial milestones—combining an onboarding diagnostic and strategy retainer with performance-aligned transaction or pipeline growth incentives.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" data-page-section="contact" class="py-24 lg:py-32 relative border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          
+          <!-- Left Contact Details -->
+          <div class="lg:col-span-5 space-y-8 reveal-up">
+            <div>
+              <span class="font-mono text-xs uppercase tracking-widest text-gold block mb-3">07 / Direct Consultation</span>
+              <h2 class="font-display font-bold text-3xl sm:text-5xl text-ivory tracking-tight leading-tight">
+                Let’s Discuss Your Next <span class="font-serif italic font-normal text-gold">Strategic</span> Move.
+              </h2>
+              <p class="mt-4 text-slateMuted text-base leading-relaxed">
+                Whether evaluating a business acquisition, preparing for a strategic exit, or scaling your enterprise sales pipeline, reach out directly for a confidential conversation.
+              </p>
+            </div>
+
+            <div class="space-y-4 pt-2">
+              <a href="mailto:contact@ravidhayal.com" class="p-4 rounded-xl bg-surface border border-white/10 hover:border-gold/40 flex items-center gap-4 transition-all group">
+                <div class="w-11 h-11 rounded-lg bg-gold/10 text-gold flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <div>
+                  <span class="font-mono text-[11px] uppercase tracking-wider text-slateMuted block">Direct Electronic Mail</span>
+                  <span class="font-display font-semibold text-base text-ivory group-hover:text-gold transition-colors">contact@ravidhayal.com</span>
+                </div>
+              </a>
+
+              <div class="p-4 rounded-xl bg-surface border border-white/10 flex items-center gap-4">
+                <div class="w-11 h-11 rounded-lg bg-gold/10 text-gold flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <div>
+                  <span class="font-mono text-[11px] uppercase tracking-wider text-slateMuted block">Executive Base</span>
+                  <span class="font-display font-semibold text-base text-ivory">Gurugram / New Delhi, Delhi NCR, India</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Interactive Consultation Form -->
+          <div class="lg:col-span-7 reveal-up stagger-1">
+            <form id="consultation-form" class="p-8 sm:p-10 rounded-3xl bg-charcoal border border-white/10 shadow-2xl space-y-6" novalidate>
+              <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                <h3 class="font-display font-bold text-xl text-ivory">Confidential Mandate Inquiry</h3>
+                <span class="font-mono text-xs text-emerald-400">● 24h Response SLA</span>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label for="full-name" class="block font-mono text-xs uppercase tracking-wider text-slateMuted mb-2">Full Name *</label>
+                  <input type="text" id="full-name" name="name" required placeholder="e.g., Vikram Singhania" class="w-full px-4 py-3.5 rounded-xl bg-surface border border-white/10 text-ivory placeholder-slateMuted/50 focus:outline-none focus:border-gold transition-colors text-sm" />
+                </div>
+                <div>
+                  <label for="work-email" class="block font-mono text-xs uppercase tracking-wider text-slateMuted mb-2">Work Email *</label>
+                  <input type="email" id="work-email" name="email" required placeholder="name@company.com" class="w-full px-4 py-3.5 rounded-xl bg-surface border border-white/10 text-ivory placeholder-slateMuted/50 focus:outline-none focus:border-gold transition-colors text-sm" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label for="phone" class="block font-mono text-xs uppercase tracking-wider text-slateMuted mb-2">Phone / WhatsApp *</label>
+                  <input type="tel" id="phone" name="phone" required placeholder="+91 98XXX XXXXX" class="w-full px-4 py-3.5 rounded-xl bg-surface border border-white/10 text-ivory placeholder-slateMuted/50 focus:outline-none focus:border-gold transition-colors text-sm" />
+                </div>
+                <div>
+                  <label for="mandate-type" class="block font-mono text-xs uppercase tracking-wider text-slateMuted mb-2">Primary Objective</label>
+                  <select id="mandate-type" name="subject" class="w-full px-4 py-3.5 rounded-xl bg-surface border border-white/10 text-ivory focus:outline-none focus:border-gold transition-colors text-sm">
+                    <option value="Business Acquisition / Exit">Business Acquisition / M&A Exit</option>
+                    <option value="Revenue & Lead Growth">Revenue & Lead Pipeline Growth</option>
+                    <option value="Real Estate / Wealth Advisory">Commercial Real Estate & Portfolio Advisory</option>
+                    <option value="Speaking / Board Advisory">Executive / Board Partnership</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="message" class="block font-mono text-xs uppercase tracking-wider text-slateMuted mb-2">Brief Context & Timeline *</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Share a brief overview of your business, current revenue stage, or acquisition goals..." class="w-full px-4 py-3.5 rounded-xl bg-surface border border-white/10 text-ivory placeholder-slateMuted/50 focus:outline-none focus:border-gold transition-colors text-sm"></textarea>
+              </div>
+
+              <div id="form-feedback" class="hidden p-4 rounded-xl text-sm font-medium" role="status" aria-live="polite"></div>
+
+              <button type="submit" class="btn-gold w-full py-4 rounded-xl font-display font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2">
+                <span>Transmit Confidential Brief</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRIVACY POLICY SUBPAGE ================= -->
+    <section id="privacy" data-page-section="privacy" class="hidden py-24 lg:py-32 border-b border-white/5">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-widest text-gold block mb-2">Governance & Compliance</span>
+          <h2 class="font-display font-bold text-3xl sm:text-5xl text-ivory">Privacy Policy & Confidentiality Charter</h2>
+          <p class="font-mono text-xs text-slateMuted mt-2">Effective Date: January 1, 2026 • Last Reviewed: October 2026</p>
+        </div>
+        <div class="p-8 rounded-2xl bg-surface border border-white/10 space-y-6 text-sm sm:text-base text-slateMuted leading-relaxed">
+          <h3 class="font-display font-bold text-xl text-ivory">1. Executive Confidentiality Commitment</h3>
+          <p>All corporate disclosures, financial statements, valuation memorandums, and strategic mandate inquiries submitted through <strong>ravidhayal.com</strong> are treated with strict institutional confidentiality. Information is never syndicated to third-party counterparties without explicit prior written authorization from the principal.</p>
+          <h3 class="font-display font-bold text-xl text-ivory">2. Information Collection & Usage</h3>
+          <p>We collect only the contact details and mandate context voluntarily provided via our consultation intake forms or direct electronic mail. This data is utilized exclusively to evaluate potential advisory engagements, M&A matchmaking, or executive consulting requests.</p>
+          <h3 class="font-display font-bold text-xl text-ivory">3. Data Security & Retention</h3>
+          <p>Client records are safeguarded using enterprise-grade encryption and restricted access controls. Principals may request the permanent deletion or return of their proprietary records at any time by contacting <a href="mailto:contact@ravidhayal.com" class="text-gold hover:underline">contact@ravidhayal.com</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TERMS OF ENGAGEMENT SUBPAGE ================= -->
+    <section id="terms" data-page-section="terms" class="hidden py-24 lg:py-32 border-b border-white/5">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-widest text-gold block mb-2">Terms of Engagement</span>
+          <h2 class="font-display font-bold text-3xl sm:text-5xl text-ivory">Terms & Conditions of Advisory</h2>
+          <p class="font-mono text-xs text-slateMuted mt-2">Governing Jurisdiction: New Delhi / Gurugram, India</p>
+        </div>
+        <div class="p-8 rounded-2xl bg-surface border border-white/10 space-y-6 text-sm sm:text-base text-slateMuted leading-relaxed">
+          <h3 class="font-display font-bold text-xl text-ivory">1. Scope of Information</h3>
+          <p>The case studies, portfolio metrics, and strategic frameworks presented on <strong>ravidhayal.com</strong> are for informational purposes and illustrate historical leadership mandates across banking, PropTech, and business acquisition sectors. They do not constitute unsolicited public securities offerings.</p>
+          <h3 class="font-display font-bold text-xl text-ivory">2. Formal Mandate Execution</h3>
+          <p>A formal advisory, business acquisition, or fractional executive relationship commences only upon the mutual execution of a written Engagement Letter and Non-Disclosure Agreement (NDA) defining deliverables, timelines, and commercial terms.</p>
+          <h3 class="font-display font-bold text-xl text-ivory">3. Intellectual Property</h3>
+          <p>All proprietary GTM playbooks, valuation narratives, and brand assets on this website remain the intellectual property of Ravi Dhayal or their respective institutional trademark holders.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-obsidian border-t border-white/10 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+        
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-surface border border-gold/40 overflow-hidden flex items-center justify-center">
+              <img src="assets/images/ravi.jpg" alt="Ravi Dhayal" class="w-full h-full object-cover object-top" />
+            </div>
+            <div>
+              <p class="font-display font-bold text-base text-ivory">RAVI DHAYAL</p>
+              <p class="font-mono text-xs text-slateMuted">ravidhayal.com — Executive Portfolio & Advisory</p>
+            </div>
+          </div>
+          <p class="text-sm text-slateMuted max-w-sm leading-relaxed">
+            Strategic Business Acquisition, Revenue Architecture, and Institutional Growth Advisory for founders, investors, and enterprises.
+          </p>
+        </div>
+
+        <div class="md:col-span-4 space-y-3">
+          <p class="font-mono text-xs uppercase tracking-widest text-gold">Site Directory & Pages</p>
+          <div class="grid grid-cols-2 gap-2 text-xs font-mono uppercase tracking-wider text-slateMuted">
+            <a href="#home" data-route="home" class="route-link hover:text-gold transition-colors py-1">Overview</a>
+            <a href="pages/about.html" data-route="about" class="route-link hover:text-gold transition-colors py-1">About Us</a>
+            <a href="#services" data-route="services" class="route-link hover:text-gold transition-colors py-1">Services</a>
+            <a href="pages/projects.html" data-route="projects" class="route-link hover:text-gold transition-colors py-1">Case Studies</a>
+            <a href="#process" data-route="process" class="route-link hover:text-gold transition-colors py-1">Methodology</a>
+            <a href="pages/testimonials.html" data-route="testimonials" class="route-link hover:text-gold transition-colors py-1">Testimonials</a>
+            <a href="#faq" data-route="faq" class="route-link hover:text-gold transition-colors py-1">Executive FAQ</a>
+            <a href="pages/contact.html" data-route="contact" class="route-link hover:text-gold transition-colors py-1">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="md:col-span-3 space-y-3">
+          <p class="font-mono text-xs uppercase tracking-widest text-gold">Legal & Governance</p>
+          <div class="flex flex-col space-y-2 text-xs font-mono uppercase tracking-wider text-slateMuted">
+            <a href="#privacy" data-route="privacy" class="route-link hover:text-gold transition-colors py-1">Privacy & Confidentiality</a>
+            <a href="#terms" data-route="terms" class="route-link hover:text-gold transition-colors py-1">Terms of Engagement</a>
+            <a href="mailto:contact@ravidhayal.com" class="hover:text-gold transition-colors py-1 lowercase">contact@ravidhayal.com</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slateMuted">
+        <p>© <span id="current-year">2026</span> Ravi Dhayal. All rights reserved.</p>
+        <p class="font-mono">Gurugram • New Delhi • Global Advisory</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= CASE STUDY & SERVICE DETAIL MODAL ================= -->
+  <div id="case-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-obsidian/80 backdrop-blur-md" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="relative w-full max-w-2xl rounded-2xl bg-charcoal border border-white/15 p-6 sm:p-8 shadow-2xl">
+      <div class="flex items-start justify-between gap-4 pb-4 border-b border-white/10">
+        <div>
+          <span id="modal-tag" class="font-mono text-xs uppercase tracking-widest text-gold">Mandate Dossier</span>
+          <h3 id="modal-title" class="font-display font-bold text-2xl text-ivory mt-1">Mandate Overview</h3>
+        </div>
+        <button id="close-modal-btn" aria-label="Close modal" class="p-2 rounded-lg bg-surface text-slateMuted hover:text-ivory border border-white/10">
+          ✕
+        </button>
+      </div>
+      <div class="py-6 space-y-4 text-sm sm:text-base text-slateMuted leading-relaxed">
+        <p id="modal-description"></p>
+        <div class="p-4 rounded-xl bg-surface border border-white/10">
+          <p class="font-mono text-xs uppercase text-gold mb-2">Key Deliverables & Quantified Impact</p>
+          <p id="modal-impact" class="text-ivory text-sm"></p>
+        </div>
+      </div>
+      <div class="pt-4 border-t border-white/10 flex justify-end gap-3">
+        <button id="modal-secondary-close" class="px-5 py-2.5 rounded-full bg-surface text-ivory text-xs font-mono uppercase tracking-wider border border-white/10">Close</button>
+        <a href="#contact" data-route="contact" id="modal-cta" class="route-link btn-gold px-6 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider font-semibold">Discuss Similar Mandate</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= INTERACTIVE JAVASCRIPT ================= -->
+  <script>
+    (function () {
+      const yearEl = document.getElementById('current-year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // Mobile Navigation Toggle
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileDrawer = document.getElementById('mobile-drawer');
+      const iconOpen = document.getElementById('menu-icon-open');
+      const iconClose = document.getElementById('menu-icon-close');
+
+      function toggleMobileMenu(forceClose = false) {
+        const isHidden = mobileDrawer.classList.contains('hidden');
+        if (forceClose || !isHidden) {
+          mobileDrawer.classList.add('hidden');
+          iconOpen.classList.remove('hidden');
+          iconClose.classList.add('hidden');
+          mobileBtn.setAttribute('aria-expanded', 'false');
+        } else {
+          mobileDrawer.classList.remove('hidden');
+          iconOpen.classList.add('hidden');
+          iconClose.classList.remove('hidden');
+          mobileBtn.setAttribute('aria-expanded', 'true');
+        }
+      }
+
+      mobileBtn.addEventListener('click', () => toggleMobileMenu());
+
+      // Multi-Page & Section Router
+      const allSections = document.querySelectorAll('main section[data-page-section]');
+      const breadcrumbBar = document.getElementById('subpage-breadcrumb');
+      const breadcrumbCurrent = document.getElementById('breadcrumb-current');
+      const returnOverviewBtn = document.getElementById('return-full-overview');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      const routeTitles = {
+        home: 'Executive Overview',
+        about: 'About Ravi Dhayal',
+        services: 'Advisory Services & Mandates',
+        projects: 'Case Studies & Portfolio',
+        process: 'Execution Methodology',
+        testimonials: 'Executive Endorsements',
+        faq: 'Frequently Asked Questions',
+        contact: 'Direct Consultation',
+        privacy: 'Privacy & Confidentiality Policy',
+        terms: 'Terms & Conditions'
+      };
+
+      function showAllCoreSections() {
+        breadcrumbBar.classList.add('hidden');
+        allSections.forEach(sec => {
+          const pageKey = sec.getAttribute('data-page-section');
+          if (pageKey === 'privacy' || pageKey === 'terms') {
+            sec.classList.add('hidden');
+          } else {
+            sec.classList.remove('hidden');
+          }
+        });
+      }
+
+      function navigateToRoute(routeKey, updateHash = true) {
+        toggleMobileMenu(true);
+
+        if (routeKey === 'privacy' || routeKey === 'terms') {
+          breadcrumbBar.classList.remove('hidden');
+          breadcrumbCurrent.textContent = routeTitles[routeKey] || routeKey;
+          allSections.forEach(sec => {
+            if (sec.getAttribute('data-page-section') === routeKey) {
+              sec.classList.remove('hidden');
+            } else {
+              sec.classList.add('hidden');
+            }
+          });
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          showAllCoreSections();
+          const targetEl = document.getElementById(routeKey);
+          if (targetEl) {
+            const topOffset = targetEl.getBoundingClientRect().top + window.scrollY - 84;
+            window.scrollTo({ top: Math.max(0, topOffset), behavior: 'smooth' });
+          }
+        }
+
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('data-route') === routeKey);
+        });
+
+        if (updateHash && history.pushState) {
+          history.pushState(null, '', '#' + routeKey);
+        }
+      }
+
+      document.querySelectorAll('.route-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+          const routeKey = link.getAttribute('data-route');
+          if (routeKey) {
+            e.preventDefault();
+            navigateToRoute(routeKey);
+          }
+        });
+      });
+
+      if (returnOverviewBtn) {
+        returnOverviewBtn.addEventListener('click', () => navigateToRoute('home'));
+      }
+
+      // Handle initial URL hash
+      window.addEventListener('load', () => {
+        const hash = window.location.hash.replace('#', '');
+        if (hash && routeTitles[hash]) {
+          navigateToRoute(hash, false);
+        }
+      });
+
+      // Scroll-Triggered Reveal Animations
+      const revealElements = document.querySelectorAll('.reveal-up');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+      revealElements.forEach(el => observer.observe(el));
+
+      // Active Navigation Link Highlight on Scroll
+      window.addEventListener('scroll', () => {
+        if (!breadcrumbBar.classList.contains('hidden')) return;
+        let current = 'home';
+        allSections.forEach(section => {
+          if (section.classList.contains('hidden')) return;
+          const sectionTop = section.offsetTop - 160;
+          if (window.scrollY >= sectionTop) {
+            current = section.getAttribute('id');
+          }
+        });
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('data-route') === current);
+        });
+      }, { passive: true });
+
+      // Portfolio Category Filter
+      const filterBtns = document.querySelectorAll('.project-filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+
+          filterBtns.forEach(b => {
+            b.classList.remove('bg-gold', 'text-obsidian', 'font-semibold');
+            b.classList.add('bg-surface', 'text-slateMuted');
+          });
+          btn.classList.add('bg-gold', 'text-obsidian', 'font-semibold');
+          btn.classList.remove('bg-surface', 'text-slateMuted');
+
+          projectCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            if (filter === 'all' || category === filter) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+        });
+      });
+
+      // Case Study & Service Detail Modal Data
+      const modalData = {
+        'modal-1': {
+          tag: 'M&A Deal Origination • BusinessEx.com',
+          title: 'Mid-Market Business Acquisition & Deal Onboarding Engine',
+          description: 'Designed and executed a standardized qualification and onboarding protocol for business owners seeking strategic exits, joint ventures, or franchise expansion across India.',
+          impact: '3.8× increase in qualified sell-side and buy-side mandates; streamlined valuation discovery and institutional counterparty matching.'
+        },
+        'modal-2': {
+          tag: 'Digital Authority & Growth',
+          title: 'High-Converting Executive Advisory & Inbound Lead System',
+          description: 'Transformed executive digital positioning by combining conversion-centric web architecture, local search authority, and direct WhatsApp lead qualification.',
+          impact: '5× increase in qualified inbound consulting and business acquisition inquiries within 90 days of deployment.'
+        },
+        'modal-3': {
+          tag: 'PropTech & Asset Advisory • Square Yards',
+          title: 'Primary & Commercial Real Estate Distribution Architecture',
+          description: 'Led multi-team investment advisory operations connecting Tier-1 real estate developers with domestic HNI and global NRI investors.',
+          impact: 'Consistently ranked in top leadership cohorts for transaction velocity, developer mandate retention, and client yield satisfaction.'
+        },
+        'modal-4': {
+          tag: 'Institutional Banking • ICICI / Kotak / HDFC / IndusInd',
+          title: 'SME Credit, Wealth & Corporate Treasury Portfolio Scaling',
+          description: 'Managed complex corporate banking relationships, working capital credit lines, and HNI wealth portfolios across India’s premier private banks.',
+          impact: 'Maintained pristine portfolio asset quality while expanding cross-product institutional adoption.'
+        },
+        'modal-5': {
+          tag: 'Franchise Syndication • Multi-City Expansion',
+          title: 'Master Franchise & Multi-Region Distribution Syndication',
+          description: 'Structured master franchise models, territory rights, and investor vetting frameworks for emerging consumer and healthcare brands.',
+          impact: 'Accelerated multi-city distribution footprints with zero balance-sheet dilution for founding teams.'
+        },
+        'modal-6': {
+          tag: 'Revenue Operations & Sales Governance',
+          title: 'Enterprise Inside-Sales & Advisory Desk Transformation',
+          description: 'Implemented structured consultative discovery playbooks, CRM stage gates, and daily pipeline review cadences for a 45-member advisory group.',
+          impact: '+64% improvement in lead-to-mandate conversion ratio and 40% reduction in average sales cycle length.'
+        },
+        'service-1': {
+          tag: 'Advisory Domain 01 • M&A & Exit Readiness',
+          title: 'Business Acquisition & Strategic Exit Blueprint',
+          description: 'Comprehensive support for founders and boards navigating buy-side expansion or sell-side divestiture. Includes information memorandum preparation, valuation positioning, and direct outreach to strategic acquirers and private syndicates.',
+          impact: 'End-to-end mandate management from confidential diagnostic through term-sheet negotiation and diligence.'
+        },
+        'service-2': {
+          tag: 'Advisory Domain 02 • Revenue Architecture',
+          title: 'High-Velocity Go-To-Market & Lead Engine',
+          description: 'Custom engineering of your B2B or high-ticket B2C client acquisition funnel. We align digital authority, inbound capture, CRM automation, and sales team governance.',
+          impact: 'Designed to multiply qualified pipeline velocity (up to 5×) while lowering customer acquisition cost.'
+        },
+        'service-3': {
+          tag: 'Advisory Domain 03 • Institutional & Real Estate Desk',
+          title: 'Commercial Asset, Banking & Portfolio Structuring',
+          description: 'Advisory grounded in 12+ years across ICICI Bank, Kotak Mahindra Bank, HDFC Bank, IndusInd Bank, and Square Yards—helping HNIs and enterprises structure commercial real estate and banking facilities.',
+          impact: 'Institutional-grade underwriting, yield optimization, and direct access to premier developer and banking networks.'
+        }
+      };
+
+      const modal = document.getElementById('case-modal');
+      const modalTag = document.getElementById('modal-tag');
+      const modalTitle = document.getElementById('modal-title');
+      const modalDesc = document.getElementById('modal-description');
+      const modalImpact = document.getElementById('modal-impact');
+
+      function openModalByKey(key) {
+        const data = modalData[key];
+        if (data) {
+          modalTag.textContent = data.tag;
+          modalTitle.textContent = data.title;
+          modalDesc.textContent = data.description;
+          modalImpact.textContent = data.impact;
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+        }
+      }
+
+      function closeModal() {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+
+      document.querySelectorAll('.open-project-modal').forEach(btn => {
+        btn.addEventListener('click', () => openModalByKey(btn.getAttribute('data-modal-id')));
+      });
+
+      document.querySelectorAll('.open-service-modal').forEach(btn => {
+        btn.addEventListener('click', () => openModalByKey(btn.getAttribute('data-service-id')));
+      });
+
+      document.getElementById('close-modal-btn').addEventListener('click', closeModal);
+      document.getElementById('modal-secondary-close').addEventListener('click', closeModal);
+      document.getElementById('modal-cta').addEventListener('click', closeModal);
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+
+      // Fixed FAQ Accordion
+      const faqTriggers = document.querySelectorAll('.faq-trigger');
+      faqTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          const parentItem = trigger.closest('.faq-item');
+          const content = trigger.nextElementSibling;
+          const icon = trigger.querySelector('.faq-icon');
+          const isOpen = content.classList.contains('open');
+
+          document.querySelectorAll('#faq-accordion .faq-item').forEach(item => item.classList.remove('is-open'));
+          document.querySelectorAll('#faq-accordion .accordion-content').forEach(c => c.classList.remove('open'));
+          document.querySelectorAll('#faq-accordion .faq-icon').forEach(i => i.classList.remove('rotate-45'));
+          document.querySelectorAll('#faq-accordion .faq-trigger').forEach(t => t.setAttribute('aria-expanded', 'false'));
+
+          if (!isOpen) {
+            parentItem.classList.add('is-open');
+            content.classList.add('open');
+            icon.classList.add('rotate-45');
+            trigger.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      // Accessible Consultation Form Validation & Handling
+      const form = document.getElementById('consultation-form');
+      const feedback = document.getElementById('form-feedback');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const phone = form.phone.value.trim();
+        const message = form.message.value.trim();
+
+        if (!name || !email || !phone || !message) {
+          feedback.className = 'p-4 rounded-xl text-sm font-medium bg-red-500/15 border border-red-500/40 text-red-200 block';
+          feedback.textContent = 'Please complete all required fields (*) so we can properly evaluate your inquiry.';
+          return;
+        }
+
+        feedback.className = 'p-4 rounded-xl text-sm font-medium bg-emerald-500/15 border border-emerald-500/40 text-emerald-200 block';
+        feedback.textContent = `Thank you, ${name}. Your confidential mandate brief has been logged. Ravi Dhayal's office will reach out within 24 hours.`;
+        form.reset();
+      });
+    })();
+  </script>
+</body>
+</html>
